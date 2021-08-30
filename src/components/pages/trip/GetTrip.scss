@@ -1,0 +1,195 @@
+.main-places-display {
+    .row {
+        .left {
+            float: left;
+            width: 50%;
+            box-shadow: 4px 8px 16px 0 rgba(0, 0, 0, 0.2);
+            .top {
+                width: 100%;
+                height: 100%;
+                background-color: rgb(126, 126, 126);
+                .img-text {
+                    width: 100%;
+                    height: 100%;
+                    position: relative;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    img {
+                        width: 100%;
+                        height: 100%;
+                        object-fit: cover;
+                        aspect-ratio: 16/9;
+                        opacity: 0.8;
+                    }
+                    .text {
+                        position: absolute;
+                        background-color: white;
+                        bottom: -8rem;
+                        width: 60%;
+                        height: 13rem;
+                        border-radius: 20px;
+                        padding: 1rem;
+                        gap: 2rem;
+                        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+                        .tripinfo {
+                            display: flex;
+                            gap: 1rem;
+                            width: 100%;
+                            line-height: 2.5rem;
+                            align-items: center;
+                            label {
+                                font-weight: bold;
+                            }
+                            input,
+                            p {
+                                font-size: 1.2rem;
+                                letter-spacing: 0.5px;
+                            }
+                            input {
+                                border: none;
+                                border-bottom: 1px solid grey;
+                                outline: none;
+                            }
+                            ::placeholder {
+                                color: black;
+                                padding: 10px;
+                            }
+                        }
+                    }
+                }
+            }
+
+            .button {
+                width: 100%;
+                margin: 1rem 0;
+                padding: 0rem 1rem;
+                display: flex;
+                justify-content: space-between;
+
+                .btn {
+                    text-transform: uppercase;
+                    width: auto;
+                    height: 35px;
+                    padding: 5px 10px;
+                    background-color: black;
+                    color: white;
+                    border-radius: 10px;
+                    font-weight: 700;
+                    border: 0px;
+                    transform: scale(0.9);
+                    cursor: pointer;
+                    transition: 0.2s ease-in-out;
+                    font-size: 1rem;
+                    box-shadow: 0px 4px 8px 0 rgba(0, 0, 0, 0.2);
+                }
+
+                .btn:hover {
+                    transform: scale(1.05);
+                    letter-spacing: 1px;
+                }
+                .btn:active {
+                    transform: scale(0.9);
+                    letter-spacing: -0.84px;
+                }
+            }
+
+            .place-display-by-day {
+                .nav-date {
+                    position: sticky;
+                    top: 0;
+                    background-color: white;
+                    display: flex;
+                    width: 100%;
+                    justify-content: center;
+                    align-items: center;
+                    gap: 2rem;
+                    padding: 1rem 0;
+                    font-size: 1.5rem;
+                    font-style: italic;
+                    font-weight: 700;
+                    z-index: 10;
+                    margin-left: -48rem;
+                    opacity: 0;
+                    box-shadow: 0px 4px 8px 0 rgba(0, 0, 0, 0.2);
+
+                    span {
+                        color: white;
+                        mix-blend-mode: difference;
+                    }
+
+                    button {
+                        padding: 0rem 1rem;
+                        border: none;
+                        cursor: pointer;
+                        mix-blend-mode: difference;
+                        transition: 0.1s ease-in-out;
+                        transform: scale(0.9);
+                        box-shadow: 0px 4px 8px 0 rgba(0, 0, 0, 0.2);
+                        font-size: 1.5rem;
+                        border-radius: 5px;
+                    }
+
+                    button:hover {
+                        transform: scale(1);
+                    }
+
+                    button:active {
+                        transform: scale(0.9);
+                    }
+                }
+
+                .nav-date.go-in {
+                    transition: 1s ease-in-out;
+                    margin-left: 0px;
+                    opacity: 1;
+                    // margin-top: 10rem;
+                }
+                .nav-date.go-out {
+                    transition: 2s ease;
+                }
+
+                .trip-display {
+                    margin-top: 3rem;
+                    .t-d {
+                        position: relative;
+                        .trip-distance {
+                            display: flex;
+                            align-items: center;
+                            justify-content: flex-end;
+                            width: 50%;
+                            z-index: -10;
+                            position: absolute;
+                            top: 50%;
+                            transition: 1s ease-in-out;
+                        }
+
+                        .trip-distance.active {
+                            padding: 0 1rem;
+                            border-right: 2px black dashed;
+                            position: initial;
+                            top: 0;
+                            height: 5rem;
+                            text-transform: uppercase;
+                            letter-spacing: 0px;
+                            font-style: italic;
+                            font-weight: 600;
+                        }
+                    }
+                }
+            }
+        }
+        .right {
+            // background-color: khaki;
+            width: 50%;
+            position: fixed;
+            right: 0rem;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-transform: uppercase;
+            font-size: 5rem;
+        }
+    }
+}

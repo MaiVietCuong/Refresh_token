@@ -1,0 +1,96 @@
+.displays-page {
+    margin: 1rem 0 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    gap: 1rem;
+    background-color: white;
+    // border-top: 1px solid rgb(224, 224, 224);
+    padding: 0 0.5rem;
+
+    .name-des {
+        width: 100%;
+        gap: 10px;
+        .name {
+            width: 100%;
+            background-color: #f3f4f6;
+            color: #525154;
+            padding: 10px;
+            text-transform: capitalize;
+            font-size: 1.1em;
+            font-weight: 700;
+            box-shadow: 2px 4px 8px 0 rgba(0, 0, 0, 0.2);
+            border-radius: 10px;
+        }
+        .des {
+            width: 100%;
+            height: 7.5rem;
+            overflow-y: scroll;
+            overflow-x: hidden;
+            background-color: #f3f4f6;
+            color: #909193;
+            font-style: italic;
+            text-align: justify;
+            padding: 3px 10px;
+            margin-top: 10px;
+            box-shadow: 2px 4px 8px 0 rgba(0, 0, 0, 0.2);
+            border-radius: 10px;
+        }
+        ::-webkit-scrollbar {
+            width: 3px;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: rgba(0, 0, 0, 0.2);
+            // border-radius: 50%;
+        }
+    }
+    .img {
+        width: 50%;
+        // height: 180px;
+        position: relative;
+        overflow: hidden;
+        border-radius: 10px;
+        box-shadow: 2px 4px 8px 0 rgba(0, 0, 0, 0.2);
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            cursor: pointer;
+            transition: 0.5s ease-in-out;
+            aspect-ratio: 16/12;
+            transform: scale(1.1);
+        }
+        img:hover {
+            transform: scale(1.2);
+        }
+    }
+    .buttons {
+        display: flex;
+        padding: auto;
+        flex-direction: column;
+        gap: 0.75rem;
+        justify-content: space-between;
+        align-items: center;
+        // background-color: black;
+        button {
+            width: 100%;
+            height: 100%;
+            color: white;
+            padding: 0.5rem 0.7rem;
+            background-color: #000;
+            border-radius: 50%;
+            border: 0px;
+            transform: scale(0.9);
+            transition: 0.2s ease-in-out;
+            cursor: pointer;
+            font-size: 1rem;
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+        }
+        button:hover {
+            transform: scale(1.1);
+        }
+        button:active {
+            transform: scale(0.9);
+        }
+    }
+}

@@ -1,0 +1,66 @@
+.register-page {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    width: 100%;
+    background-color: #f0f2f5;
+    fieldset {
+        padding: 1rem;
+        line-height: 2.5rem;
+        width: 100%;
+        background-color: white;
+        border: 10px double black;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+        border-radius: 10px;
+        legend {
+            position: relative;
+            // padding: 0.5rem;
+            animation: animated_legend 1s 1s 1;
+            transform: rotate(-20deg) scale(0.8);
+            margin-left: -10%;
+            background-color: black;
+            padding: 5px 15px;
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+            color: white;
+            font-weight: 600;
+            letter-spacing: 0px;
+            font-size: 1.5rem;
+        }
+        @keyframes animated_legend {
+            from {
+                transform: rotate(-20deg) scale(0.1);
+            }
+            to {
+                transform: rotate(-20deg) scale(0.8);
+            }
+        }
+        input,
+        button {
+            width: 100%;
+            padding: 5px 8px;
+            border: none;
+            border-bottom: 2px solid black;
+            font-size: 1.1rem;
+            margin: 1rem 0;
+        }
+        button {
+            border: none;
+            background-color: black;
+            color: white;
+            font-weight: 600;
+            cursor: pointer;
+            transform: scale(0.9);
+            text-transform: uppercase;
+            border-radius: 10px;
+            letter-spacing: 0;
+            transition: 0.2s ease;
+        }
+        button:hover {
+            transform: scale(0.95);
+        }
+        button:active {
+            transform: scale(0.8);
+        }
+    }
+}

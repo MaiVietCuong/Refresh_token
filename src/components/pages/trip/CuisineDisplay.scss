@@ -1,0 +1,180 @@
+.cuisine-display-page {
+    display: flex;
+    align-items: center;
+    // justify-content: space-evenly;
+    // background-color: black;
+    margin: 1rem 0 2rem 0;
+    padding: 0rem 0.5rem;
+    width: 100%;
+    height: 100%;
+    gap: 1rem;
+    .img {
+        text-align: center;
+        width: 35%;
+        position: relative;
+        overflow: hidden;
+        border-radius: 10px;
+        box-shadow: 2px 4px 8px 0 rgba(0, 0, 0, 0.2);
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            cursor: pointer;
+            transition: 0.5s ease-in-out;
+            aspect-ratio: 16/11;
+            transform: scale(1.1);
+        }
+        img:hover {
+            transform: scale(1.2);
+        }
+    }
+    .img::before,
+    .img::after {
+        content: "";
+        position: absolute;
+        top: 10%;
+        left: 4%;
+        width: 10px;
+        height: 5px;
+        background-color: yellowgreen;
+        box-shadow: 2px 4px 8px 0 rgba(0, 0, 0, 0.2);
+        z-index: 1;
+    }
+    .img::before {
+        transform: rotate(130deg);
+        padding-left: 5px;
+        left: 6%;
+        top: 7.5%;
+    }
+    .img::after {
+        transform: rotate(40deg);
+    }
+    .img:hover::before,
+    .img:hover::after {
+        background-color: yellow;
+    }
+
+    .info {
+        width: 50%;
+        height: 100%;
+        .name {
+            width: 100%;
+            background-color: #f3f4f6;
+            color: #525154;
+            padding: 10px;
+            text-transform: capitalize;
+            font-size: 1.1em;
+            font-weight: 700;
+            box-shadow: 2px 4px 8px 0 rgba(0, 0, 0, 0.2);
+            border-radius: 10px;
+        }
+        .cuisine-hashtag {
+            width: 100%;
+            height: 8rem;
+            // overflow-y: scroll;
+            // overflow-x: hidden;
+            overflow: hidden;
+            background-color: #f3f4f6;
+            color: #909193;
+            font-style: italic;
+            padding: 3px 10px;
+            margin-top: 10px;
+            box-shadow: 2px 4px 8px 0 rgba(0, 0, 0, 0.2);
+            border-radius: 10px;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            line-height: 2rem;
+            .true {
+                color: #22bb33;
+                text-shadow: 0 0 5px greenyellow;
+                cursor: pointer;
+                i {
+                    text-shadow: 0 04px greenyellow;
+                }
+            }
+            .false {
+                color: white;
+                text-shadow: 0 0 2px #000;
+            }
+        }
+
+        ::-webkit-scrollbar {
+            width: 3px;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: rgba(0, 0, 0, 0.2);
+            // border-radius: 50%;
+        }
+    }
+
+    .description {
+        height: 8rem;
+        width: 16%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        p {
+            text-transform: capitalize;
+            font-weight: normal;
+            background-color: black;
+            color: white;
+            text-shadow: 0 0 5px #000;
+            padding: 0.3rem 1rem;
+            flex-wrap: nowrap;
+            box-shadow: 2px 4px 8px 0 rgba(0, 0, 0, 0.2);
+            // border-radius: 10px;
+            cursor: pointer;
+            font-weight: bold;
+            position: relative;
+        }
+        .meal::before,
+        .city::before,
+        .price::before {
+            content: "";
+            position: absolute;
+            width: 0;
+            height: 100%;
+            left: auto;
+            right: 0;
+            top: 0;
+            display: flex;
+            // border-radius: 10px;
+            justify-content: center;
+            align-items: center;
+            background-color: white;
+            text-transform: uppercase;
+            transition: 0.25s ease;
+            border: 1px solid white;
+            z-index: -1;
+            letter-spacing: 1.5px;
+        }
+        .meal:hover::before {
+            content: "meal";
+            left: 0;
+            right: auto;
+            width: 100%;
+            z-index: 1;
+        }
+        .city:hover::before {
+            content: "city";
+            left: 0;
+            right: auto;
+            width: 100%;
+            z-index: 1;
+        }
+        .price:hover::before {
+            content: "price";
+            left: 0;
+            right: auto;
+            width: 100%;
+            z-index: 1;
+        }
+
+        // .website {
+        //     flex-direction: column;
+        //     gap: 0;
+        // }
+    }
+}
